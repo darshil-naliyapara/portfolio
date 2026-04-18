@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hardik Agrawal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#0a0a0a',
+          bg2: '#111111',
+          bg3: '#161616',
+          bg4: '#1c1c1c',
+          brd: '#222222',
+          brd2: '#2e2e2e',
+          brd3: '#3a3a3a',
+          txt: '#f0f0f0',
+          txt2: '#c8c8c8',
+          txt3: '#a0a0a0',
+          muted: '#707070',
+          accent: '#22d3ee',
+          'accent-dim': '#0e7490',
+          'accent-bg': 'rgba(34,211,238,0.06)',
+          grn: '#4ade80',
+          'grn-bg': '#0d1f12',
+          'grn-brd': '#1a3d25',
+        },
+        fontFamily: {
+          mono: ['"JetBrains Mono"', 'monospace'],
+          sans: ['Outfit', 'sans-serif'],
+        },
+        animation: {
+          fadeUp: 'fadeUp 0.6s forwards',
+          pulseDot: 'pulseDot 2s ease-in-out infinite',
+          pulseDotFast: 'pulseDot 1.5s ease-in-out infinite',
+          blink: 'blink 1s step-end infinite',
+        },
+        keyframes: {
+          fadeUp: {
+            '0%': { opacity: '0', transform: 'translateY(18px)' },
+            '100%': { opacity: '1', transform: 'translateY(0)' },
+          },
+          pulseDot: {
+            '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+            '50%': { opacity: '0.5', transform: 'scale(0.8)' },
+          },
+          blink: {
+            '0%, 100%': { opacity: '1' },
+            '50%': { opacity: '0' },
+          }
+        }
+      }
+    }
+  }
+</script>
+
+<style type="text/tailwindcss">
+  @layer utilities {
+    .reveal {
+      @apply opacity-0 translate-y-[22px] transition-all duration-[650ms];
+    }
+    .reveal.visible {
+      @apply opacity-100 translate-y-0;
+    }
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #0a0a0a; }
+  ::-webkit-scrollbar-thumb { background: #3a3a3a; border-radius: 2px; }
+</style>
+</head>
+<body class="bg-bg text-txt2 font-sans text-base leading-[1.6] overflow-x-hidden">
+
+<nav class="fixed top-0 left-0 right-0 z-[100] border-b border-brd bg-[rgba(10,10,10,0.92)] backdrop-blur-[16px] px-5 sm:px-8">
+  <div class="max-w-[960px] mx-auto flex items-center justify-between h-[58px]">
+    <span class="font-mono text-[13px] text-accent tracking-[0.05em] flex items-center gap-2">
+      <span class="w-[7px] h-[7px] rounded-full bg-accent animate-pulseDot"></span>
+      hardik.dev
+      <span class="inline-block w-[2px] h-[0.85em] bg-accent align-text-bottom animate-blink ml-[1px]"></span>
+    </span>
+    <ul class="flex list-none gap-0">
+      <li><a href="#experience" class="font-mono text-[11px] text-txt3 no-underline tracking-[0.1em] uppercase transition-colors duration-200 px-4 py-[0.4rem] rounded hover:text-txt hover:bg-bg3">Exp</a></li>
+      <li><a href="#projects" class="font-mono text-[11px] text-txt3 no-underline tracking-[0.1em] uppercase transition-colors duration-200 px-4 py-[0.4rem] rounded hover:text-txt hover:bg-bg3">Projects</a></li>
+      <li><a href="#skills" class="font-mono text-[11px] text-txt3 no-underline tracking-[0.1em] uppercase transition-colors duration-200 px-4 py-[0.4rem] rounded hover:text-txt hover:bg-bg3">Skills</a></li>
+      <li><a href="#contact" class="font-mono text-[11px] text-txt3 no-underline tracking-[0.1em] uppercase transition-colors duration-200 px-4 py-[0.4rem] rounded hover:text-txt hover:bg-bg3">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="max-w-[960px] mx-auto px-5 sm:px-8">
+
+  <section id="hero" class="min-h-screen flex flex-col justify-center pt-[56px] pb-16 relative">
+    <div class="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(34,211,238,0.05)_0%,transparent_70%)] pointer-events-none z-0"></div>
+    
+    <p class="font-mono text-[12px] text-accent tracking-[0.15em] uppercase mb-6 opacity-0 animate-[fadeUp_0.6s_0.1s_forwards] flex items-center gap-[10px] relative z-10 before:content-[''] before:inline-block before:w-[28px] before:h-[1px] before:bg-accent">
+      Software Developer · Python · Odoo · Django · JavaScript
+    </p>
+    
+    <h1 class="font-mono text-[clamp(2.8rem,6vw,4.4rem)] font-bold text-white leading-[1.05] mb-[1.2rem] opacity-0 animate-[fadeUp_0.6s_0.2s_forwards] tracking-[-0.02em] relative z-10">
+      Hardik<br/><span class="text-accent">Agrawal</span>
+    </h1>
+    
+    <p class="text-[1.05rem] font-normal text-txt3 mb-[1.2rem] opacity-0 animate-[fadeUp_0.6s_0.3s_forwards] flex items-center gap-2 relative z-10 before:content-['//'] before:font-mono before:text-accent-dim before:text-[0.85rem]">
+      Software Developer · B.E. Computer Science · GTU — 8.26 CGPA
+    </p>
+    
+    <p class="max-w-[580px] text-base text-txt3 leading-[1.85] mb-[2.5rem] opacity-0 animate-[fadeUp_0.6s_0.4s_forwards] relative z-10">
+      Computer Science graduate with hands-on experience building <strong class="text-txt font-medium">production-grade Python/Django systems</strong> and custom Odoo modules — <strong class="text-txt font-medium">5 deployed to real client environments</strong>. I care about clean architecture, async workflows, and backend systems that scale.
+    </p>
+    
+    <div class="flex flex-wrap gap-[0.8rem] opacity-0 animate-[fadeUp_0.6s_0.5s_forwards] relative z-10">
+      <a href="mailto:harryag09@gmail.com" class="inline-flex items-center gap-2 font-mono text-[11px] font-medium tracking-[0.1em] uppercase py-3 px-6 rounded-md no-underline transition-all duration-200 cursor-pointer bg-transparent text-txt2 border border-brd3 hover:text-txt hover:border-txt3 hover:bg-bg3">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        Email Me
+      </a>
+      <a href="https://wa.me/918619674946" target="_blank" class="inline-flex items-center gap-2 font-mono text-[11px] font-medium tracking-[0.1em] uppercase py-3 px-6 rounded-md no-underline transition-all duration-200 cursor-pointer bg-transparent text-grn border border-grn-brd hover:bg-grn-bg hover:border-grn hover:-translate-y-[1px]">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    
+    <div class="flex flex-wrap sm:flex-nowrap gap-[1.5rem] sm:gap-0 mt-[4rem] pt-[2rem] border-t border-brd opacity-0 animate-[fadeUp_0.6s_0.6s_forwards] relative z-10">
+      <div class="sm:pr-[2.5rem] sm:border-r border-brd2 sm:mr-[2.5rem] last:border-r-0 last:pr-0 last:mr-0 min-w-[80px]">
+        <div class="font-mono text-[1.8rem] font-bold text-white leading-none">5+</div>
+        <div class="text-[0.78rem] text-muted mt-[5px]">Odoo Production Modules</div>
+      </div>
+      <div class="sm:pr-[2.5rem] sm:border-r border-brd2 sm:mr-[2.5rem] last:border-r-0 last:pr-0 last:mr-0 min-w-[80px]">
+        <div class="font-mono text-[1.8rem] font-bold text-white leading-none">2</div>
+        <div class="text-[0.78rem] text-muted mt-[5px]">Internships</div>
+      </div>
+      <div class="sm:pr-[2.5rem] sm:border-r border-brd2 sm:mr-[2.5rem] last:border-r-0 last:pr-0 last:mr-0 min-w-[80px]">
+        <div class="font-mono text-[1.8rem] font-bold text-white leading-none">8.26</div>
+        <div class="text-[0.78rem] text-muted mt-[5px]">CGPA</div>
+      </div>
+      <div class="sm:pr-[2.5rem] sm:border-r border-brd2 sm:mr-[2.5rem] last:border-r-0 last:pr-0 last:mr-0 min-w-[80px]">
+        <div class="font-mono text-[1.8rem] font-bold text-white leading-none">8+</div>
+        <div class="text-[0.78rem] text-muted mt-[5px]">Projects</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="py-[5rem] border-t border-brd">
+    <p class="font-mono text-[11px] text-accent tracking-[0.18em] uppercase mb-[2.5rem] flex items-center gap-[12px] after:content-[''] after:flex-1 after:h-[1px] after:bg-brd2 reveal">Experience</p>
+
+    <div class="mb-[3rem] pb-[3rem] border-b border-brd last:border-b-0 last:mb-0 last:pb-0 reveal">
+      <div class="flex justify-between items-start gap-[1rem] mb-[0.4rem] flex-wrap">
+        <span class="font-mono text-[1rem] font-semibold text-white">Software Development Intern</span>
+        <span class="font-mono text-[11px] text-accent bg-accent-bg border border-[rgba(34,211,238,0.15)] px-[10px] py-[3px] rounded whitespace-nowrap">Oct 2025 – Jan 2026</span>
+      </div>
+      <div class="text-[0.9rem] text-txt3 mb-[1.2rem]"><strong class="text-accent font-medium">Odoo Inc.</strong> &nbsp;·&nbsp; Gandhinagar, Gujarat</div>
+      <ul class="list-none flex flex-col gap-[0.7rem]">
+        <li class="text-[0.93rem] text-txt3 leading-[1.75] pl-[1.4rem] relative before:content-['▸'] before:absolute before:left-0 before:text-accent before:text-[0.75rem] before:top-[3px]">Developed <strong class="text-txt font-medium">6 custom Odoo modules; 5 deployed to real client production environments</strong> covering Sales, MRP, POS, and Website.</li>
+        <li class="text-[0.93rem] text-txt3 leading-[1.75] pl-[1.4rem] relative before:content-['▸'] before:absolute before:left-0 before:text-accent before:text-[0.75rem] before:top-[3px]">Built backend logic in <strong class="text-txt font-medium">Python</strong> and frontend interactions with <strong class="text-txt font-medium">JavaScript / OWL</strong>, backed by PostgreSQL.</li>
+        <li class="text-[0.93rem] text-txt3 leading-[1.75] pl-[1.4rem] relative before:content-['▸'] before:absolute before:left-0 before:text-accent before:text-[0.75rem] before:top-[3px]">Deep-dived into Odoo module architecture, ORM, views, forms, and scheduled actions during comprehensive technical training.</li>
+        <li class="text-[0.93rem] text-txt3 leading-[1.75] pl-[1.4rem] relative before:content-['▸'] before:absolute before:left-0 before:text-accent before:text-[0.75rem] before:top-[3px]">Bridged business requirements with technical implementations through hands-on Odoo functional workflows.</li>
+      </ul>
+    </div>
+
+    <div class="mb-[3rem] pb-[3rem] border-b border-brd last:border-b-0 last:mb-0 last:pb-0 reveal">
+      <div class="flex justify-between items-start gap-[1rem] mb-[0.4rem] flex-wrap">
+        <span class="font-mono text-[1rem] font-semibold text-white">Web Development Intern</span>
+        <span class="font-mono text-[11px] text-accent bg-accent-bg border border-[rgba(34,211,238,0.15)] px-[10px] py-[3px] rounded whitespace-nowrap">Jan 2025 – Apr 2025</span>
+      </div>
+      <div class="text-[0.9rem] text-txt3 mb-[1.2rem]"><strong class="text-accent font-medium">eHeuristic Solutions</strong> &nbsp;·&nbsp; Rajkot, Gujarat</div>
+      <ul class="list-none flex flex-col gap-[0.7rem]">
+        <li class="text-[0.93rem] text-txt3 leading-[1.75] pl-[1.4rem] relative before:content-['▸'] before:absolute before:left-0 before:text-accent before:text-[0.75rem] before:top-[3px]">Built scalable full-stack web applications using <strong class="text-txt font-medium">Laravel (MVC)</strong> and JavaScript with RESTful API integration.</li>
+        <li class="text-[0.93rem] text-txt3 leading-[1.75] pl-[1.4rem] relative before:content-['▸'] before:absolute before:left-0 before:text-accent before:text-[0.75rem] before:top-[3px]">Designed responsive, intuitive UIs following contemporary UI/UX best practices.</li>
+        <li class="text-[0.93rem] text-txt3 leading-[1.75] pl-[1.4rem] relative before:content-['▸'] before:absolute before:left-0 before:text-accent before:text-[0.75rem] before:top-[3px]">Managed relational databases and optimised data flow between frontend and backend layers.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="py-[5rem] border-t border-brd">
+    <p class="font-mono text-[11px] text-accent tracking-[0.18em] uppercase mb-[2.5rem] flex items-center gap-[12px] after:content-[''] after:flex-1 after:h-[1px] after:bg-brd2 reveal">Projects</p>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(340px,1fr))] gap-[1px] bg-brd reveal">
+      
+      <div class="group bg-bg p-[2rem] transition-colors duration-[0.25s] relative overflow-hidden hover:bg-bg2">
+        <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+        <div class="font-mono text-[10px] text-muted mb-[0.8rem] tracking-[0.12em]">PROJECT 01</div>
+        <div class="font-mono text-[0.95rem] font-semibold text-white mb-[0.6rem]"><a href="" target="_blank" class="text-white no-underline transition-colors duration-200 hover:text-accent">AI Resume Analyzer — Backend ↗</a></div>
+        <div class="inline-flex items-center gap-[6px] font-mono text-[10px] text-grn bg-grn-bg border border-grn-brd px-[10px] py-[3px] rounded mb-[1rem] before:content-[''] before:w-[5px] before:h-[5px] before:rounded-full before:bg-grn before:animate-pulseDotFast">In Development</div>
+        <p class="text-[0.9rem] text-txt3 leading-[1.78] mb-[1.2rem]">Django 5 REST API powering an AI SaaS platform. Integrates Google Gemini 2.5 Flash with strict JSON response schema and INVALID_INPUT detection to avoid wasting user credits. Async analysis pipeline via Celery + Redis so the API never blocks on AI processing. Custom JWT auth with email verification, Google/GitHub OAuth via django-allauth, per-user monthly credit limits with lazy reset logic, and a CanAnalyze permission class enforced before every analysis call. Fully containerised with Docker Compose.</p>
+        <div class="flex flex-wrap gap-[0.4rem]">
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Django 5</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">DRF</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Celery</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Redis</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Gemini 2.5 Flash</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">PostgreSQL</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Docker</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">JWT</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">OAuth</span>
+        </div>
+      </div>
+
+      <div class="group bg-bg p-[2rem] transition-colors duration-[0.25s] relative overflow-hidden hover:bg-bg2">
+        <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+        <div class="font-mono text-[10px] text-muted mb-[0.8rem] tracking-[0.12em]">PROJECT 02</div>
+        <div class="font-mono text-[0.95rem] font-semibold text-white mb-[0.6rem]"><a href="" target="_blank" class="text-white no-underline transition-colors duration-200 hover:text-accent">AI Resume Analyzer — Frontend ↗</a></div>
+        <div class="inline-flex items-center gap-[6px] font-mono text-[10px] text-grn bg-grn-bg border border-grn-brd px-[10px] py-[3px] rounded mb-[1rem] before:content-[''] before:w-[5px] before:h-[5px] before:rounded-full before:bg-grn before:animate-pulseDotFast">In Development</div>
+        <p class="text-[0.9rem] text-txt3 leading-[1.78] mb-[1.2rem]">Next.js 16 frontend for the AI Resume Analyzer SaaS. Clean resume upload flow, real-time analysis results display, and Google OAuth via @react-oauth/google. JWT tokens persisted in localStorage with automatic refresh handling. Styled with Tailwind CSS v4 using Syne and DM Mono typefaces — fully connected to the Django DRF backend.</p>
+        <div class="flex flex-wrap gap-[0.4rem]">
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Next.js 16</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Tailwind v4</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Google OAuth</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">JWT</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Syne</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">DM Mono</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">TypeScript</span>
+        </div>
+      </div>
+
+      <div class="group bg-bg p-[2rem] transition-colors duration-[0.25s] relative overflow-hidden hover:bg-bg2">
+        <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+        <div class="font-mono text-[10px] text-muted mb-[0.8rem] tracking-[0.12em]">PROJECT 03</div>
+        <div class="font-mono text-[0.95rem] font-semibold text-white mb-[0.6rem]"><a href="" target="_blank" class="text-white no-underline transition-colors duration-200 hover:text-accent">High-Performance Auth API ↗</a></div>
+        <p class="text-[0.9rem] text-txt3 leading-[1.78] mb-[1.2rem]">Blazing-fast authentication microservice built with Axum and diesel_async, leveraging async Rust to handle high-throughput requests at sub-millisecond latency. Stateless JWT auth with custom middleware protecting every route. PostgreSQL database layer with sanitised inputs, security-first architecture, and production-grade error handling to prevent swallowed exceptions.</p>
+        <div class="flex flex-wrap gap-[0.4rem]">
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Rust</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Axum</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Diesel-async</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">JWT</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="group bg-bg p-[2rem] transition-colors duration-[0.25s] relative overflow-hidden hover:bg-bg2">
+        <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+        <div class="font-mono text-[10px] text-muted mb-[0.8rem] tracking-[0.12em]">PROJECT 04</div>
+        <div class="font-mono text-[0.95rem] font-semibold text-white mb-[0.6rem]"><a href="" target="_blank" class="text-white no-underline transition-colors duration-200 hover:text-accent">Laract-Blog Platform ↗</a></div>
+        <p class="text-[0.9rem] text-txt3 leading-[1.78] mb-[1.2rem]">Modern full-stack SPA blog platform using Laravel with Inertia.js and React, delivering a seamless no-refresh experience without a separate API layer. Complete auth system — login, registration, and email verification via Laravel's built-in auth — plus a responsive, immersive UI built with contemporary UI/UX practices.</p>
+        <div class="flex flex-wrap gap-[0.4rem]">
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Laravel</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">React</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">Inertia.js</span>
+          <span class="font-mono text-[10px] text-txt3 bg-bg4 border border-brd2 px-[10px] py-[4px] rounded transition-all duration-200 hover:border-accent hover:text-accent">MySQL</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills" class="py-[5rem] border-t border-brd">
+    <p class="font-mono text-[11px] text-accent tracking-[0.18em] uppercase mb-[2.5rem] flex items-center gap-[12px] after:content-[''] after:flex-1 after:h-[1px] after:bg-brd2 reveal">Skills</p>
+    <div class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-[1.2rem] reveal">
+      
+      <div class="bg-bg2 border border-brd2 rounded-lg p-[1.5rem] transition-colors duration-200 hover:border-brd3">
+        <p class="font-mono text-[10px] text-accent tracking-[0.15em] uppercase mb-[1rem] flex items-center gap-[7px] before:content-[''] before:w-[14px] before:h-[1px] before:bg-accent">Languages</p>
+        <div class="flex flex-wrap gap-[0.5rem]">
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Python</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Rust</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">JavaScript</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">TypeScript</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">PHP</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Java</span>
+        </div>
+      </div>
+      
+      <div class="bg-bg2 border border-brd2 rounded-lg p-[1.5rem] transition-colors duration-200 hover:border-brd3">
+        <p class="font-mono text-[10px] text-accent tracking-[0.15em] uppercase mb-[1rem] flex items-center gap-[7px] before:content-[''] before:w-[14px] before:h-[1px] before:bg-accent">Frameworks</p>
+        <div class="flex flex-wrap gap-[0.5rem]">
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Django / DRF</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Laravel</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Next.js</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">React</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Axum</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Node.js</span>
+        </div>
+      </div>
+      
+      <div class="bg-bg2 border border-brd2 rounded-lg p-[1.5rem] transition-colors duration-200 hover:border-brd3">
+        <p class="font-mono text-[10px] text-accent tracking-[0.15em] uppercase mb-[1rem] flex items-center gap-[7px] before:content-[''] before:w-[14px] before:h-[1px] before:bg-accent">Databases</p>
+        <div class="flex flex-wrap gap-[0.5rem]">
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">PostgreSQL</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">MySQL</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Redis</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">MongoDB</span>
+        </div>
+      </div>
+      
+      <div class="bg-bg2 border border-brd2 rounded-lg p-[1.5rem] transition-colors duration-200 hover:border-brd3">
+        <p class="font-mono text-[10px] text-accent tracking-[0.15em] uppercase mb-[1rem] flex items-center gap-[7px] before:content-[''] before:w-[14px] before:h-[1px] before:bg-accent">DevOps & Cloud</p>
+        <div class="flex flex-wrap gap-[0.5rem]">
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Docker</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Linux</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">AWS</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">CI/CD</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Microservices</span>
+        </div>
+      </div>
+      
+      <div class="bg-bg2 border border-brd2 rounded-lg p-[1.5rem] transition-colors duration-200 hover:border-brd3">
+        <p class="font-mono text-[10px] text-accent tracking-[0.15em] uppercase mb-[1rem] flex items-center gap-[7px] before:content-[''] before:w-[14px] before:h-[1px] before:bg-accent">Tools</p>
+        <div class="flex flex-wrap gap-[0.5rem]">
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Git</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">GitHub</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">pytest</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">JWT Auth</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Celery</span>
+        </div>
+      </div>
+      
+      <div class="bg-bg2 border border-brd2 rounded-lg p-[1.5rem] transition-colors duration-200 hover:border-brd3">
+        <p class="font-mono text-[10px] text-accent tracking-[0.15em] uppercase mb-[1rem] flex items-center gap-[7px] before:content-[''] before:w-[14px] before:h-[1px] before:bg-accent">Certifications</p>
+        <div class="flex flex-wrap gap-[0.5rem]">
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">Deloitte Tech Simulation</span>
+          <span class="font-mono text-[11px] text-txt2 bg-bg3 border border-brd2 px-[12px] py-[5px] rounded-[5px] transition-all duration-200 cursor-default hover:border-accent hover:text-accent hover:bg-accent-bg">AWS Essentials</span>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="contact" class="py-[5rem] border-t border-brd">
+    <p class="font-mono text-[11px] text-accent tracking-[0.18em] uppercase mb-[2.5rem] flex items-center gap-[12px] after:content-[''] after:flex-1 after:h-[1px] after:bg-brd2 reveal">Contact</p>
+    <div class="grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-[1px] bg-brd border border-brd rounded-lg overflow-hidden reveal">
+      
+      <a href="mailto:harryag09@gmail.com" class="bg-bg2 p-[1.8rem] flex flex-col gap-[0.4rem] transition-colors duration-200 no-underline hover:bg-bg3">
+        <div class="font-mono text-[10px] text-muted uppercase tracking-[0.12em]">Email</div>
+        <div class="text-[0.9rem] text-txt2 mt-[2px]">harryag09@gmail.com</div>
+        <div class="font-mono text-[11px] text-accent mt-auto pt-[1rem]">Send →</div>
+      </a>
+      
+      <a href="https://wa.me/918619674946" target="_blank" class="bg-bg2 p-[1.8rem] flex flex-col gap-[0.4rem] transition-colors duration-200 no-underline hover:bg-bg3">
+        <div class="font-mono text-[10px] text-muted uppercase tracking-[0.12em]">WhatsApp</div>
+        <div class="text-[0.9rem] text-txt2 mt-[2px]">+91 86196 74946</div>
+        <div class="font-mono text-[11px] text-accent mt-auto pt-[1rem]">Chat →</div>
+      </a>
+            
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-brd py-[2.5rem] px-[2rem] text-center">
+  <p class="font-mono text-[11px] text-muted tracking-[0.05em]">Built by <span class="text-accent">Hardik Agrawal</span> · 2025 · <span class="text-accent">harryag09@gmail.com</span></p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ 
+      e.target.classList.add('visible'); 
+      observer.unobserve(e.target); 
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach((el,i) => {
+  el.style.transitionDelay = (i % 4) * 0.1 + 's';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
